@@ -11,8 +11,7 @@ email: gmaayan@bu.edu
 description: > # this means to ignore newlines until "baseurl:"
   Homepage for Gabriel Maayan.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
+url: "http://gmaayan.com" # the base hostname & protocol for your site
 github_username:  gabemgem
 
 # Build settings
