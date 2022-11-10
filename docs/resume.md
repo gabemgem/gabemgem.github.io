@@ -11,7 +11,7 @@ B.S. in Computer Science from Rensselaer Polytechnic Institute in Troy, NY. Comp
 At MITRE I worked on a large variety of projects as a software engineer in both junior developer and leadership roles. Some of the projects I worked on include the following.
 
 ### Artificial Societies
-- Developed an Agent-Based Model (ABM) simulating Washington DC to examine the opiod crisis
+- Developed an Agent-Based Model (ABM) simulating Washington DC to examine the opioid crisis
 - Expanded a framework used for the quick development of generic artificial societies
 - Rebuilt the model in Python to look at wildfire insurance
 - Engaged in weekly meetings with subject matter experts
