@@ -1,0 +1,10 @@
+---
+layout: default 
+--- 
+
+<ul>
+    {% assign files = site.static_files | where_exp: "file", "file.path contains '/files/'" %}
+    {% for file in files %}
+        <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+    {% endfor %}
+</ul>>
