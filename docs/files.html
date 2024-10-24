@@ -5,6 +5,9 @@ layout: default
 <ul>
     {% assign files = site.static_files | where_exp: "file", "file.path contains '/files/'" %}
     {% for file in files %}
-        <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+        {% assign filechecker = "/files/" | append: file.name %}
+        {% if file.path == filechecker %}
+            <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+        {% endif %}
     {% endfor %}
 </ul>
