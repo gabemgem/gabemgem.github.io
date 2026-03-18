@@ -5,23 +5,37 @@ permalink: /resume/
 ---
 
 ## Education
-B.S. in Computer Science from Rensselaer Polytechnic Institute in Troy, NY. Completed in May 2020.
+PhD in Computing and Data Science from Boston University. 2023-Present, Expected 2027.
+
+B.S. in Computer Science from Rensselaer Polytechnic Institute in Troy, NY. Completed in May 2020, Magna cum laude.
+
+## PhD Research Projects --- 2023-Present
+
+### The Suicidal Mind
+Synthesized multiple leading psychological theories of suicide into an individual-level simulation of suicidality, developed in collaboration with domain experts. Demonstrated that the model reproduces theoretically characteristic suicidal trajectories documented in clinical and empirical literature, enabling rapid and safe testing of individual- and population-level interventions. Presented at the 2025 International Association for Suicide Prevention World Congress (Vienna, Austria).
+
+### Sex Trafficking Legislation
+Developed and calibrated a system dynamics model of the commercial sex work and sex trafficking ecosystem using Massachusetts data. Worked with policy advocates to evaluate legislative interventions, with results prepared for briefing to the Massachusetts Senate Judiciary Committee.
+
+### Strategies Against Rural Suicide
+Co-developed a population-level system dynamics model of suicide in Montana in partnership with state public health officials. Used the model to evaluate intervention strategies aligned with the Montana DPHHS 2025 Suicide Prevention Strategic Plan.
+
+### Woke/Anti-Woke Ideology Model
+Developed a system dynamics model of ideological polarization in Norwegian society based on a novel Moral Foundations Theory-driven framework. The model reproduces observed societal states at three politically distinct time points, supporting its use for comparative and counterfactual analysis.
 
 ## The MITRE Corporation --- Software Engineer --- 2020-2022
-At MITRE I worked on a large variety of projects as a software engineer in both junior developer and leadership roles. Some of the projects I worked on include the following.
+At MITRE I worked on a large variety of projects as a software engineer in both developer and leadership roles. Some of the projects I worked on include the following.
 
 ### Artificial Societies
-- Developed an Agent-Based Model (ABM) simulating Washington DC to examine the opioid crisis
-- Expanded a framework used for the quick development of generic artificial societies
-- Rebuilt the model in Python to look at wildfire insurance
-- Engaged in weekly meetings with subject matter experts
-- Worked with Repast HPC, Repast4Py, C++, Python, PostgreSQL, Apache Kafka, Apache Druid, and Apache Superset
+- Developed an Agent-Based Model (ABM) of Washington DC that successfully predicted the effects of COVID on the opioid crisis
+- Extended a reusable framework for rapid construction of large-scale, domain-agnostic artificial societies
+- Built and scaled the system using Repast HPC and Repast4Py (C++, Python), with data ingestion and analytics via PostgreSQL, Apache Kafka, Apache Druid, and Apache Superset
 
 ### The Artificial Organization
-- Developed an ABM simulating COVID-19 spread through a university
-- Set up scenarios and performed data-analysis on the results
-- Collaborated with several external organizations and universities
-- Worked with Java and Simudyne (an ABM SDK) for development, and with Python and Excel for analysis
+- Developed an ABM of COVID-19 transmission in a university setting
+- Performed extensive empirical validation against data from Northeastern, Purdue and Case Western Reserve Universities, revealing policy- and context-dependent differences in transmission dynamics
+- Implemented the model in Java using Simudyne; conducted analysis and visualization in Python and Excel
+- Presented this work at the 2025 Social Simulation Conference in Delft, Netherlands
 
 ### The Agnostic Simulation Framework
 - Developed a messaging framework for large-scale distributed simulations on top of RTI DDS
