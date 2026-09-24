@@ -1,0 +1,5 @@
+Build locally with:
+
+podman run --rm -p 4000:4000 -v "./docs:/srv/jekyll" jekyll/jekyll jekyll serve --host 0.0.0.0
+
+And then open http://localhost:4000.
