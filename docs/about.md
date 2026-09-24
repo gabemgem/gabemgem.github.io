@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+nav_order: 1
 ---
 
 I am a PhD candidate with Boston University's Faculty of Computing and Data Science. My research interests are primarily based around trying to understand complex systems to learn more about how to deal with issues such as societal equity and justice, public health, etc. So far I have used modeling and simulation as my tools to tackle this research.

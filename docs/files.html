@@ -1,13 +1,23 @@
 ---
-layout: default 
---- 
+layout: page
+title: Files
+permalink: /files/
+nav_order: 4
+page_class: files
+subtitle: Papers, slides, and interactive model explorations.
+---
 
-<ul>
+<ul class="file-list">
     {% assign files = site.static_files | where_exp: "file", "file.path contains '/files/'" %}
     {% for file in files %}
         {% assign filechecker = "/files/" | append: file.name %}
         {% if file.path == filechecker %}
-            <li><a href="{{ file.path }}">{{ file.name }}</a></li>
+            <li>
+                <a href="{{ file.path | prepend: site.baseurl }}">
+                    <span class="file-ext file-ext--{{ file.extname | remove: '.' }}">{{ file.extname | remove: '.' }}</span>
+                    <span class="file-name">{{ file.basename | replace: '_', ' ' }}</span>
+                </a>
+            </li>
         {% endif %}
     {% endfor %}
 </ul>

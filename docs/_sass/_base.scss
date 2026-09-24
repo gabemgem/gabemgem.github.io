@@ -8,21 +8,35 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 
 /**
  * Basic styling
  */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font: #{$base-font-weight} #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    -webkit-font-feature-settings: "kern" 1;
-    -moz-font-feature-settings: "kern" 1;
-    -o-font-feature-settings: "kern" 1;
-    font-feature-settings: "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-kerning: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+::selection {
+    background: $brand-color-border;
+    color: $heading-color;
 }
 
 
@@ -66,10 +80,12 @@ figcaption {
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin-left: $spacing-unit * 0.75;
 }
 
 li {
+    margin-bottom: 4px;
+
     > ul,
     > ol {
          margin-bottom: 0;
@@ -82,7 +98,10 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: $base-font-weight;
+    font-weight: 700;
+    color: $heading-color;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
 }
 
 
@@ -93,14 +112,18 @@ h1, h2, h3, h4, h5, h6 {
 a {
     color: $brand-color;
     text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
+    transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
 
     &:hover {
-        color: $text-color;
+        color: $brand-color-dark;
         text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+
+    &:focus-visible {
+        outline: 2px solid $brand-color;
+        outline-offset: 2px;
+        border-radius: 3px;
     }
 }
 
@@ -110,11 +133,9 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
-    border-left: 4px solid $grey-color-light;
+    color: $grey-color-dark;
+    border-left: 4px solid $brand-color-border;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
-    letter-spacing: -1px;
     font-style: italic;
 
     > :last-child {
@@ -131,8 +152,8 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #eef;
+    border-radius: 6px;
+    background-color: #f8fafc;
 }
 
 code {
@@ -153,11 +174,21 @@ pre {
 
 
 /**
+ * Horizontal rules
+ */
+hr {
+    border: 0;
+    border-top: 1px solid $grey-color-light;
+    margin: $spacing-unit 0;
+}
+
+
+
+/**
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: $content-width;
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -165,10 +196,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-        max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-        padding-right: $spacing-unit / 2;
-        padding-left: $spacing-unit / 2;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 
@@ -197,10 +226,11 @@ pre {
         display: inline-block;
         width: 16px;
         height: 16px;
-        vertical-align: middle;
+        vertical-align: -2px;
+        margin-right: 6px;
 
         path {
-            fill: $grey-color;
+            fill: currentColor;
         }
     }
 }
